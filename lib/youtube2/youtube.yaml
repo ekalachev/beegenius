@@ -1,0 +1,4 @@
+url: https://oauth2.googleapis.com/token
+clientId: 115129637334791866224
+clientSecret: [client secret from the API console]
+code: [single use auth code]
