@@ -1,6 +1,7 @@
 import 'package:beegenius/screens/video_player_screen.dart';
+import 'package:beegenius/youtube/src/model/youtube_video.dart';
+import 'package:beegenius/youtube/youtube_api.dart';
 import 'package:flutter/material.dart';
-import 'package:youtube_api/youtube_api.dart';
 import '../theme.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -14,7 +15,7 @@ class _HomeScreenState extends State<HomeScreen> {
   static String key = "AIzaSyAwHzDnQUvUXEcCjX-WQOdb1_nh-nRsxMk";
   static String channelId = "UCHl0eauyGSH4GDDYnFiccyQ";
 
-  YoutubeAPI youtube = YoutubeAPI(key, type: "channel", maxResults: 3);
+  YoutubeAPI youtube = YoutubeAPI(key, type: "channel");
   List<YouTubeVideo> videoResult = [];
 
   Future<void> callAPI() async {
